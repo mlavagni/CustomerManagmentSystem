@@ -13,6 +13,7 @@ namespace Acme.CommonTest
         public void WriteToFileTest()
         {
             //Arrange 
+            //Testing new branch --comment
             var changedItems = new List<ILoggable>();
 
             var customer = new Customer(1)
