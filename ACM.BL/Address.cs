@@ -10,6 +10,7 @@ namespace ACM.BL
     {
         public Address()
         {
+          
         }
 
         public Address(int addressId)
