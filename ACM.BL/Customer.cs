@@ -1,4 +1,5 @@
-﻿using Acme.Common;
+﻿using ACM.Models;
+using Acme.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,8 @@ namespace ACM.BL
 
         public Customer(int customerId)
         {
-            CustomerId = customerId;
-            AddressList = new List<Address>();
+           CustomerId = customerId;
+           AddressList = new List<Address>();
         }
 
 
@@ -65,17 +66,6 @@ namespace ACM.BL
             return isValid;
 
         }
-
-        /*
-        public string Log()
-        {
-            var logString = CustomerId + ": " +
-                            FullName + " " +
-                            "Email: " + EmailAddress + " " +
-                            "Status: " + EntityState.ToString();
-            return logString;
-        }
-        */
         public string Log() => 
             $"{CustomerId}: {FullName}: {EmailAddress}: {EntityState.ToString()}";
 

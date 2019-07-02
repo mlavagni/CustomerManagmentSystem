@@ -1,19 +1,23 @@
-﻿using System;
+﻿using ACM.DataAccess;
+using ACM.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace ACM.BL
 {
     public class CustomerRepository
     {
+        private AddressRepository _addressRepository;
+
         public CustomerRepository()
         {
-            addressRepository = new AddressRepository();
-        }
-
-        private AddressRepository addressRepository { get; set; }
+            _addressRepository = new AddressRepository();
+        }      
 
         public Customer Retrieve(int customerId)
         {
@@ -24,7 +28,7 @@ namespace ACM.BL
                 customer.EmailAddress = "fbaggins@hobbit.me";
                 customer.FirstName = "Frodo";
                 customer.LastName = "Baggins";
-                customer.AddressList = addressRepository.RetriveByCustomerId(customerId).ToList();
+                customer.AddressList = _addressRepository.RetriveByCustomerId(customerId).ToList();
             }
             return customer;
         }

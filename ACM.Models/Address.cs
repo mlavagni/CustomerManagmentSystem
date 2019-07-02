@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ACM.BL
+namespace ACM.Models
 {
     public class Address
     {
-        //Constructor - testing changes
+        //Constructor
         public Address()
         {
-          
+
         }
 
         public Address(int addressId)
@@ -28,18 +28,5 @@ namespace ACM.BL
         public string Country { get; set; }
         public int AddressType { get; set; }
 
-       // public int CostumerId { get; set; }
-       
-        /// <summary>
-        /// Validates the address data.
-        /// </summary>
-        /// <returns></returns>
-        public bool Validate()
-        {
-            var isValid = true;
-
-            if (PostalCode == null) isValid = false;
-            return isValid;
-        }
     }
 }
