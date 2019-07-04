@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using ACM.BL;
+using ACM.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ACM.BLTest
@@ -20,14 +21,14 @@ namespace ACM.BLTest
                 LastName = "Baggins"
         };
             //--Act
-            var actual = customerRepository.Retrieve(1);
+            Customer actual = customerRepository.Retrieve(1);
             //--Assert
-            Assert.AreEqual(expected.EmailAddress, actual.EmailAddress);
-            Assert.AreEqual(expected.FirstName, actual.FirstName);
-            Assert.AreEqual(expected.LastName, actual.LastName);
-
+             Assert.AreEqual(expected.EmailAddress, actual.EmailAddress);
+             Assert.AreEqual(expected.FirstName, actual.FirstName);
+             Assert.AreEqual(expected.LastName, actual.LastName);
         }
 
+        
         [TestMethod]
         public void RetrieveExistingWhithAddress()
         {

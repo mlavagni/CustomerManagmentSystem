@@ -64,6 +64,10 @@
       <Project>{bc455686-f109-44e0-93a8-e13c20c70138}</Project>
       <Name>ACM.BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ACM.Models\ACM.Models.csproj">
+      <Project>{E53788D2-7287-49C3-8AA9-4CE68E54EEE0}</Project>
+      <Name>ACM.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
